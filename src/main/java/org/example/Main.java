@@ -1,17 +1,39 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import application.domain.Bedroom;
+import application.domain.service;
+import application.domain.guest;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Sistema del Hotel");
+
+        // Crear habitación
+        Bedroom room = new Bedroom();
+        room.setRoom("101");
+        room.setRoomType("Suite");
+        room.setPrice(120);
+
+        System.out.println("Habitación: " + room.getRoom());
+        System.out.println("Tipo: " + room.getRoomType());
+        System.out.println("Precio: " + room.getPrice());
+
+        // Crear servicio
+        service service = new service();
+        service.setName("Spa");
+        service.setPrice(50);
+
+        System.out.println("Servicio: " + service.getName());
+        System.out.println("Precio servicio: " + service.getPrice());
+
+        // Crear huésped
+        guest guest = new guest();
+        guest.setName("Juan");
+        guest.setLastName("Perez");
+
+        System.out.println("Huésped: " + guest.getName() + " " + guest.getLastName());
     }
 }
