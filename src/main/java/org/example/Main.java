@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println("Sistema del Hotel");
 
-        // Crear habitación
+
         Bedroom room = new Bedroom();
         room.setRoom("101");
         room.setRoomType("Suite");
@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Tipo: " + room.getRoomType());
         System.out.println("Precio: " + room.getPrice());
 
-        // Crear servicio
+
         service service = new service();
         service.setName("Spa");
         service.setPrice(50);
@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Servicio: " + service.getName());
         System.out.println("Precio servicio: " + service.getPrice());
 
-        // Crear huésped
+
         guest guest = new guest();
         guest.setName("Juan");
         guest.setLastName("Perez");
